@@ -13,6 +13,14 @@ $( document ).ready(function() {
                             + idea.id +
                             ' id=delete' + idea.id + '>'
                             + 'delete' +
+                            '</a></h3></td><td><h3><a class="up btn btn-success" data-id='
+                            + idea.id +
+                            ' id=up' + idea.id + '>'
+                            + 'thumbs up' +
+                            '</a></h3></td><td><h3><a class="down btn btn-warning" data-id='
+                            + idea.id +
+                            ' id=down' + idea.id + '>'
+                            + 'thumbs down' +
                             '</a></h3></td></tr>'
                           )
       })
