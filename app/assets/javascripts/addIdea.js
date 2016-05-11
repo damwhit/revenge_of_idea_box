@@ -16,7 +16,9 @@ $( "#newIdea" ).submit(function( event ) {
                         + idea.body +
                         '</h3></td><td><h3>'
                         + idea.quality +
-                        '</h3></td></tr>'
+                        '</h3></td><td><h3><a id="delete" class="delete btn btn-danger">'
+                        + 'delete' +
+                        '</a></h3></td></tr>'
                       )
     $('#newIdea')[0].reset()
   })
