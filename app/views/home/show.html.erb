@@ -1,8 +1,16 @@
 <div class="container">
   <h1>Revenge of the Idea Box</h1>
+  <h2>got a new idear?</h2>
+  <form action="/api/v1/ideas" class="form-inline" id="newIdea">
+    <label for="title">title</label>
+    <input type="text" class="form-control" id="title">
+    <label for="body">body</label>
+    <input type="text" class="form-control" id="body">
+  <input type="submit" class="btn btn-primary" id="save"></input>
+  </form>
   <h2>yo idears:</h2>
   <table class="table thread-inverse" id="ideas">
-    <tbody>
+    <thead>
       <tr>
         <th>
           <h3>title:</h3>
@@ -14,6 +22,8 @@
           <h3>quality:</h3>
         </th>
       </tr>
+    </thead>
+    <tbody id="tbody">
     </tbody>
   </table>
 </div>
