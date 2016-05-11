@@ -11,7 +11,7 @@ $( document ).ready(function() {
                             + idea.quality +
                             '</h3></td><td><h3><a class="delete btn btn-danger" data-id='
                             + idea.id +
-                            ' id=id=' + idea.id + '>'
+                            ' id=delete' + idea.id + '>'
                             + 'delete' +
                             '</a></h3></td></tr>'
                           )
