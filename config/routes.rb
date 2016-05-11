@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :ideas, only: [:index]
     end
   end
+
+  get '/', to: 'home#show'
 end

@@ -1,12 +1,13 @@
 require 'rails_helper'
 
 RSpec.feature "user can see ideas" do
-  pending
   scenario "user sees all ideas" do
-    pending
-    create(:idea, name: "super idear")
-    create(:idea, name: "wowza idear")
+    create(:idea, title: "super idear")
+    create(:idea, title: "wowza idear")
 
+    visit '/'
 
+    expect(page).to have_content('super idear')
+    expect(page).to have_content('wowza idear')
   end
 end

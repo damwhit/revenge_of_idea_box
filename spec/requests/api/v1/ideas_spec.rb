@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "GET /api/v1/ideas" do
   it "returns a list of all ideas" do
-    include ApiHelpers
     idea1 = create(:idea)
     create(:idea, title: "test idea numero dos")
 
