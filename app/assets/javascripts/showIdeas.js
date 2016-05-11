@@ -8,7 +8,7 @@ $( document ).ready(function() {
                             '</h3></td><td><h3>'
                             + idea.body +
                             '</h3></td><td><h3>'
-                            + idea.quality +
+                            + idea.updated_at +
                             '</h3></td></tr>'
                           )
       })
