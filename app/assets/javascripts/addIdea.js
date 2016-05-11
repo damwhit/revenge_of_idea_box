@@ -18,6 +18,7 @@ $( "#newIdea" ).submit(function( event ) {
                         + idea.quality +
                         '</h3></td></tr>'
                       )
+    $('#newIdea')[0].reset()
   })
 });
 
