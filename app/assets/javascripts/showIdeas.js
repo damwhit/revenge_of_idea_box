@@ -9,7 +9,11 @@ $( document ).ready(function() {
                             + idea.body +
                             '</h3></td><td><h3>'
                             + idea.quality +
-                            '</h3></td></tr>'
+                            '</h3></td><td><h3><a class="delete btn btn-danger" data-id='
+                            + idea.id +
+                            ' id=id=' + idea.id + '>'
+                            + 'delete' +
+                            '</a></h3></td></tr>'
                           )
       })
     });
