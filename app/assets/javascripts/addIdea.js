@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 $( "#newIdea" ).submit(function( event ) {
   console.log(event)
+  
   event.preventDefault();
 
   var $form = $( this ),

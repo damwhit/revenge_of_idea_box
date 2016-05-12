@@ -4,7 +4,7 @@ module Api
       def index
         if params[:search]
           term = params[:search].try(:downcase)
-          respond_with Idea.where("LOWER(title) LIKE ?", "%#{term}%")
+          respond_with Idea.where("LOWER(title) LIKE :term OR LOWER(body) LIKE :term", term: "%#{term}%")
         else
           respond_with Idea.order(created_at: :desc)
         end
