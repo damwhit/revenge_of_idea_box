@@ -1,20 +1,10 @@
-$(document).ready(function(){
-
-$( "#newIdea" ).submit(function( event ) {
-  console.log(event)
-  event.preventDefault();
-
-  var $form = $( this ),
-    titleVal = $form.find( "input#title" ).val(),
-    bodyVal = $form.find( "input#body" ).val(),
-    url = $form.attr( "action" );
-
-  var posting = $.post( url, { title: titleVal, body: bodyVal } ).then(function(idea) {
-    $('#tbody').prepend('<tr><td><h3>'
+function getIdeas() { $.getJSON( "/api/v1/ideas.json", function( ideas ) {
+  ideas.forEach(function(idea) {
+    $('#tbody').append( '<tr><td><h3>'
                         + idea.title +
                         '</h3></td><td><h3>'
                         + idea.body +
-                        '</h3></td><td><h3>'
+                        '</h3></td><td class="quality"><h3>'
                         + idea.quality +
                         '</h3></td><td><h3><a class="delete btn btn-danger" data-id='
                         + idea.id +
@@ -34,8 +24,6 @@ $( "#newIdea" ).submit(function( event ) {
                         + 'thumbs down' +
                         '</a></h3></td></tr>'
                       )
-    $('#newIdea')[0].reset()
   })
 });
-
-});
+};
