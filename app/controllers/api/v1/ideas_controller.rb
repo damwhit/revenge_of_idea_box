@@ -2,7 +2,7 @@ module Api
   module V1
     class IdeasController < ApiController
       def index
-        respond_with Idea.order(updated_at: :desc)
+        respond_with Idea.order(created_at: :desc)
       end
 
       def create

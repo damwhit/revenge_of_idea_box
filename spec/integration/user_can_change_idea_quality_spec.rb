@@ -10,12 +10,22 @@ RSpec.feature "user can remove ideas" do
     expect(page).to have_content("swill")
 
     find("#up#{idea1.id}").click
-
     expect(page).to have_content("plausible")
 
     find("#up#{idea1.id}").click
-
     expect(page).to have_content("genius")
+
+    find("#up#{idea1.id}").click
+    expect(page).to have_content("genius")
+
+    find("#down#{idea1.id}").click
+    expect(page).to have_content("plausible")
+
+    find("#down#{idea1.id}").click
+    expect(page).to have_content("swill")
+
+    find("#down#{idea1.id}").click
+    expect(page).to have_content("swill")
 
   end
 end

@@ -10,11 +10,11 @@ $( "#newIdea" ).submit(function( event ) {
     url = $form.attr( "action" );
 
   var posting = $.post( url, { title: titleVal, body: bodyVal } ).then(function(idea) {
-    $('#tbody').prepend('<tr><td><h3>'
+    $('#tbody').prepend('<tr><td><h3 class="title">'
                         + idea.title +
-                        '</h3></td><td><h3>'
+                        '</h3></td><td><h3 class="body">'
                         + idea.body +
-                        '</h3></td><td><h3>'
+                        '</h3></td><td class="quality"><h3>'
                         + idea.quality +
                         '</h3></td><td><h3><a class="delete btn btn-danger" data-id='
                         + idea.id +
