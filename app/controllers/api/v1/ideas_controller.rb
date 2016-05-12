@@ -2,7 +2,12 @@ module Api
   module V1
     class IdeasController < ApiController
       def index
-        respond_with Idea.order(created_at: :desc)
+        if params[:search]
+          term = params[:search].try(:downcase)
+          respond_with Idea.where("LOWER(title) LIKE ?", "%#{term}%")
+        else
+          respond_with Idea.order(created_at: :desc)
+        end
       end
 
       def create
