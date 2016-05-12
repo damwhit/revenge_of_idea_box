@@ -1,11 +1,16 @@
 $(document).on('click', '.title', function(event) {
 
   $(this).attr('contentEditable', 'true');
-  $(this).on('blur keyup', function(e){
+  $(this).on('blur keydown', function(e){
 
     var titleText = this.textContent
     var ideaId = $(this).data('id')
     var key = e.which
+
+    if (key == 13) {
+      e.preventDefault()
+      $('.title').blur()
+    }
 
     if (key == 13 || e.type == 'blur') {
 
@@ -24,11 +29,16 @@ $(document).on('click', '.title', function(event) {
 $(document).on('click', '.body', function(event) {
 
   $(this).attr('contentEditable', 'true');
-  $(this).on('blur keyup', function(e){
+  $(this).on('blur keydown', function(e){
 
     var bodyText = this.textContent
     var ideaId = $(this).data('id')
     var key = e.which
+
+    if (key == 13) {
+      e.preventDefault()
+      $('.body').blur()
+    }
 
     if (key == 13 || e.type == 'blur') {
 

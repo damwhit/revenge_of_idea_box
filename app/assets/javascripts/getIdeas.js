@@ -1,8 +1,7 @@
 function getIdeas() { $.getJSON( "/api/v1/ideas.json", function( ideas ) {
   ideas.forEach(function(idea) {
     $('#tbody').append( '<tr><td><h3 class="title" data-id='
-                        + idea.id +
-                        ' id=title' + idea.id + '>'
+                        + idea.id + '>'
                         + idea.title +
                         '</h3></td><td><h3 class="body" data-id='
                         + idea.id + '>'
