@@ -1,5 +1,4 @@
 $(document).on('click', '.change', function(event){
-  console.log('thumbs up dude')
   event.preventDefault();
 
   var ideaId = $(this).data('id')
