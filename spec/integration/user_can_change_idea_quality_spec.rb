@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "user can remove ideas" do
-  scenario "user remove an idea", js: true do
+RSpec.feature "user can change idea quality" do
+  scenario "user ups or down votes ideas", js: true do
 
     idea1 = create(:idea, quality: "swill")
 

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "user can add ideas" do
-  scenario "user adds an idea", js: true do
+RSpec.feature "user can edit ideas" do
+  scenario "user edits an idea", js: true do
     create(:idea, title: "super idear")
     create(:idea, title: "wowza idear")
 
