@@ -1,10 +1,12 @@
 $(document).ready(function(){
 
+  $( "#searchIdeas" ).submit(function( event ) {
+    event.preventDefault()
+    
+  });
+
   $('#search').on('keyup', function(event){
     var searchTerm = $(this).val()
-    $( "#searchIdeas" ).submit(function( event ) {
-      event.preventDefault
-    });
 
     $.getJSON( "/api/v1/ideas.json?search=" + searchTerm, function( ideas ) {
         $('#tbody').empty()
