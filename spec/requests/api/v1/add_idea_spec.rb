@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "GET /api/v1/ideas" do
-  it "returns a list of all ideas" do
+RSpec.describe "Post /api/v1/ideas" do
+  it "adds an idea" do
     create(:idea, title: "test idea numero dos")
 
     post "/api/v1/ideas?title=newidea&body=newbody"
