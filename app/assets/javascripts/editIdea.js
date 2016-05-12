@@ -1,8 +1,7 @@
 $(document).on('click', '.title', function(event) {
-
   $(this).attr('contentEditable', 'true');
-  $(this).on('blur keydown', function(e){
 
+  $(this).on('blur keydown', function(e){
     var titleText = this.textContent
     var ideaId = $(this).data('id')
     var key = e.which

@@ -1,19 +1,18 @@
 $(document).ready(function(){
+  $( "#newIdea" ).submit(function(event) {
 
-$( "#newIdea" ).submit(function( event ) {
-  console.log(event)
-  
-  event.preventDefault();
+    event.preventDefault();
 
-  var $form = $( this ),
-    titleVal = $form.find( "input#title" ).val(),
-    bodyVal = $form.find( "input#body" ).val(),
-    url = $form.attr( "action" );
+    var $form = $(this),
+      titleVal = $form.find( "input#title" ).val(),
+      bodyVal = $form.find( "input#body" ).val(),
+      url = $form.attr( "action" );
 
-  var posting = $.post( url, { title: titleVal, body: bodyVal } ).then(function(idea) {
-    $('#tbody').prepend('<tr><td><h3 class="title">'
+    var posting = $.post( url, { title: titleVal, body: bodyVal } ).then(function(idea) { $('#tbody').prepend('<tr><td><h3 class="title" data-id='
+                        + idea.id + '>'
                         + idea.title +
-                        '</h3></td><td><h3 class="body">'
+                        '</h3></td><td><h3 class="body" data-id='
+                        + idea.id + '>'
                         + idea.body +
                         '</h3></td><td class="quality"><h3>'
                         + idea.quality +
@@ -35,8 +34,7 @@ $( "#newIdea" ).submit(function( event ) {
                         + 'thumbs down' +
                         '</a></h3></td></tr>'
                       )
-    $('#newIdea')[0].reset()
-  })
-});
-
+      $('#newIdea')[0].reset()
+    })
+  });
 });

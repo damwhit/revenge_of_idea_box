@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $( "#searchIdeas" ).submit(function( event ) {
     event.preventDefault()
-    
+
   });
 
   $('#search').on('keyup', function(event){
