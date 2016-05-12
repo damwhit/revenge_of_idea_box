@@ -6,8 +6,7 @@ $(document).on('click', '.delete', function(e) {
   $.ajax({
     url: '/api/v1/ideas/' + ideaId,
     method: "DELETE",
-    dataType: 'json',
-    data: { id: ideaId }
+    dataType: 'json'
   }).success(function() {
     console.log('deleted')
   });
