@@ -19,12 +19,7 @@ module Api
       end
 
       def update
-        idea = Idea.find(params[:id])
-        if params[:change]
-          idea.change_quality(params[:quality], params[:change])
-        else
-          idea.update(idea_params)
-        end
+        idea = Idea.find(params[:id]).update(idea_params)
         respond_with idea, location: nil
       end
 

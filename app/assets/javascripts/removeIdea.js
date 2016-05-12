@@ -1,6 +1,6 @@
-$(document).on('click', '.delete', function(e) {
-  console.log('pressed');
-  e.preventDefault();
+$(document).on('click', '.delete', function(event) {
+  event.preventDefault();
+
   var ideaId = $(this).data('id')
 
   $.ajax({
